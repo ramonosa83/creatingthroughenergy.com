@@ -1,0 +1,334 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<style>
+#cte-home *, #cte-home *::before, #cte-home *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#cte-home {
+  --deep: #0a0c10;
+  --surface: #11141b;
+  --card: #161b24;
+  --border: rgba(200, 175, 120, 0.18);
+  --gold: #c8af78;
+  --gold-light: #e2cfa0;
+  --gold-dim: rgba(200, 175, 120, 0.35);
+  --text: #e8e2d6;
+  --muted: #9a9488;
+  --whatsapp: #25D366;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Jost', system-ui, sans-serif;
+  background-color: var(--deep);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#cte-home .container { max-width: 780px; margin: 0 auto; padding: 0 32px; }
+#cte-home .container-wide { max-width: 1040px; margin: 0 auto; padding: 0 32px; }
+
+/* NAV */
+#cte-home .site-nav { padding: 22px 0; border-bottom: 1px solid var(--border); width: 100%; }
+#cte-home .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+#cte-home .nav-logo { font-family: var(--serif); font-size: 13px; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); text-decoration: none; }
+#cte-home .nav-links { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+#cte-home .nav-links a { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+#cte-home .nav-links a:hover { color: var(--gold); }
+#cte-home .nav-cta { border: 1px solid var(--gold); color: var(--gold); padding: 10px 22px; border-radius: 2px; }
+#cte-home .nav-cta:hover { background: var(--gold); color: var(--deep); }
+@media (max-width: 700px) { #cte-home .nav-links { display: none; } }
+
+/* RULE */
+#cte-home .rule { display: flex; align-items: center; gap: 16px; margin: 40px 0; }
+#cte-home .rule::before, #cte-home .rule::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--gold-dim), transparent); }
+#cte-home .rule-diamond { width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg); flex-shrink: 0; }
+
+/* HERO */
+#cte-home .hero { padding: 90px 0 80px; }
+#cte-home .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+@media (max-width: 680px) { #cte-home .hero-inner { grid-template-columns: 1fr; } }
+#cte-home .hero-photo { width: 100%; border: 1px solid var(--border); border-radius: 2px; filter: grayscale(15%) brightness(0.88); display: block; }
+#cte-home .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+#cte-home .hero h1 { font-family: var(--serif); font-size: clamp(36px, 5vw, 56px); font-weight: 300; line-height: 1.12; color: var(--text); margin-bottom: 20px; }
+#cte-home .hero h1 em { font-style: italic; color: var(--gold-light); }
+#cte-home .hero-sub { font-family: var(--serif); font-size: 18px; font-weight: 300; font-style: italic; color: var(--muted); line-height: 1.7; margin-bottom: 36px; }
+#cte-home .btn-primary { display: inline-block; padding: 16px 40px; background: transparent; border: 1px solid var(--gold); color: var(--gold); font-family: var(--sans); font-size: 12px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.3s, color 0.3s; }
+#cte-home .btn-primary:hover { background: var(--gold); color: var(--deep); }
+#cte-home .btn-note { display: block; margin-top: 12px; font-size: 11px; color: var(--muted); letter-spacing: 0.05em; }
+
+/* POSITIONING */
+#cte-home .positioning { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 72px 0; text-align: center; }
+#cte-home .positioning-text { font-family: var(--serif); font-size: clamp(22px, 3.5vw, 34px); font-weight: 300; line-height: 1.5; color: var(--text); max-width: 640px; margin: 0 auto; }
+#cte-home .positioning-text em { font-style: italic; color: var(--gold-light); }
+
+/* SECTION LABELS */
+#cte-home .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+#cte-home .section-title { font-family: var(--serif); font-size: clamp(28px, 4.5vw, 44px); font-weight: 300; line-height: 1.2; color: var(--text); margin-bottom: 32px; }
+#cte-home .section-title em { font-style: italic; color: var(--gold-light); }
+
+/* ABOUT */
+#cte-home .about { padding: 80px 0; }
+#cte-home .about-body { font-family: var(--serif); font-size: 18px; font-weight: 300; line-height: 1.85; color: #c8c2b6; }
+#cte-home .about-body p + p { margin-top: 20px; }
+#cte-home .about-body strong { color: var(--gold-light); font-weight: 400; }
+
+/* METHOD */
+#cte-home .method { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 80px 0; }
+#cte-home .method-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; margin-top: 48px; }
+@media (max-width: 680px) { #cte-home .method-grid { grid-template-columns: 1fr; } }
+#cte-home .method-item { background: var(--card); border: 1px solid var(--border); padding: 32px 28px; }
+#cte-home .method-num { font-family: var(--serif); font-size: 11px; letter-spacing: 0.2em; color: var(--gold); display: block; margin-bottom: 12px; }
+#cte-home .method-item h3 { font-family: var(--serif); font-size: 19px; font-weight: 400; color: var(--text); margin-bottom: 10px; line-height: 1.3; }
+#cte-home .method-item p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+/* TESTIMONIALS */
+#cte-home .testimonials { padding: 80px 0; }
+#cte-home .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 48px; }
+@media (max-width: 580px) { #cte-home .testimonial-grid { grid-template-columns: 1fr; } }
+#cte-home .testimonial { background: var(--card); border: 1px solid var(--border); padding: 32px 28px; }
+#cte-home .testimonial-quote { font-family: var(--serif); font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.75; color: var(--text); margin-bottom: 20px; }
+#cte-home .testimonial-quote::before { content: '\201C'; font-size: 32px; color: var(--gold-dim); display: block; line-height: 1; margin-bottom: 8px; }
+#cte-home .testimonial-attr { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+#cte-home .testimonial-attr strong { color: var(--gold); display: block; font-weight: 500; margin-bottom: 2px; }
+
+/* WORK WITH ME */
+#cte-home .work { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 80px 0; }
+#cte-home .work-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; margin-top: 48px; }
+@media (max-width: 680px) { #cte-home .work-grid { grid-template-columns: 1fr; } }
+#cte-home .work-item { background: var(--card); border: 1px solid var(--border); padding: 32px 28px; display: flex; flex-direction: column; }
+#cte-home .work-tag { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+#cte-home .work-item h3 { font-family: var(--serif); font-size: 20px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
+#cte-home .work-item p { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 24px; flex: 1; }
+#cte-home .btn-small { display: inline-block; padding: 12px 24px; background: transparent; border: 1px solid var(--gold); color: var(--gold); font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.3s, color 0.3s; align-self: flex-start; }
+#cte-home .btn-small:hover { background: var(--gold); color: var(--deep); }
+
+/* COMMUNITY STRIP */
+#cte-home .community { padding: 72px 0; text-align: center; border-top: 1px solid var(--border); }
+#cte-home .community-inner { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 32px; }
+#cte-home .btn-whatsapp { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; background: transparent; border: 1px solid var(--whatsapp); color: var(--whatsapp); font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.3s, color 0.3s; }
+#cte-home .btn-whatsapp:hover { background: var(--whatsapp); color: var(--deep); }
+#cte-home .btn-whatsapp svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
+#cte-home .btn-youtube { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; background: transparent; border: 1px solid rgba(255,0,0,0.5); color: #ff4444; font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.3s, color 0.3s; }
+#cte-home .btn-youtube:hover { background: #ff4444; color: #fff; }
+#cte-home .btn-youtube svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
+#cte-home .community-label { font-family: var(--serif); font-size: clamp(20px, 3vw, 28px); font-weight: 300; color: var(--text); margin-bottom: 8px; }
+#cte-home .community-sub { font-family: var(--serif); font-size: 16px; font-style: italic; color: var(--muted); margin-bottom: 0; }
+
+/* FINAL CTA */
+#cte-home .final-cta { padding: 100px 0; text-align: center; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+#cte-home .final-cta h2 { font-family: var(--serif); font-size: clamp(32px, 5vw, 52px); font-weight: 300; line-height: 1.2; margin-bottom: 20px; }
+#cte-home .final-cta h2 em { font-style: italic; color: var(--gold-light); }
+#cte-home .final-cta p { font-family: var(--serif); font-size: 18px; font-style: italic; color: var(--muted); margin-bottom: 48px; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+/* FOOTER */
+#cte-home footer { padding: 40px 0; text-align: center; font-size: 12px; color: var(--muted); letter-spacing: 0.08em; border-top: 1px solid var(--border); }
+#cte-home footer a { color: var(--muted); text-decoration: none; }
+#cte-home footer a:hover { color: var(--gold); }
+
+@keyframes cte-home-fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+#cte-home .fade-in { animation: cte-home-fadeUp 0.9s ease both; }
+#cte-home .fade-in.d1 { animation-delay: 0.1s; }
+#cte-home .fade-in.d2 { animation-delay: 0.22s; }
+#cte-home .fade-in.d3 { animation-delay: 0.34s; }
+#cte-home .fade-in.d4 { animation-delay: 0.46s; }
+</style>
+
+<div id="cte-home">
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="container-wide">
+      <div class="nav-inner">
+        <a href="https://creatingthroughenergy.com" class="nav-logo">Creating Through Energy</a>
+        <div class="nav-links">
+          <a href="https://www.youtube.com/@CreatingThroughEnergy" target="_blank">YouTube</a>
+          <a href="https://chat.whatsapp.com/HlIrKNoqSZG5UWfA9WI45E?mode=gi_t" target="_blank">Community</a>
+          <a href="https://meditation.creatingthroughenergy.com">Free Meditation</a>
+          <a href="https://reset.creatingthroughenergy.com">Free PDF</a>
+          <a href="https://call.creatingthroughenergy.com" class="nav-cta">Free Call</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container-wide">
+      <div class="hero-inner">
+        <div>
+          <img src="https://res.cloudinary.com/dhz4nokbu/image/upload/v1774281611/Image_20260321_080923_nb5cql.jpg" alt="Ramon Osa" class="hero-photo" />
+        </div>
+        <div>
+          <p class="eyebrow fade-in">Ramon Osa</p>
+          <h1 class="fade-in d1">
+            Wealth From the Inside.<br>
+            <em>Not Force.</em>
+          </h1>
+          <p class="hero-sub fade-in d2">I help high-achieving women rewire the survival patterns keeping them stuck at their current income &mdash; so their next level of wealth feels inevitable, not forced.</p>
+          <div class="fade-in d3">
+            <a href="https://call.creatingthroughenergy.com" class="btn-primary">Book a Free Alignment Call</a>
+            <span class="btn-note">30 minutes &middot; Free &middot; No pressure</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSITIONING -->
+  <div class="positioning">
+    <div class="container">
+      <p class="positioning-text">
+        The gap between where you are and where you&rsquo;re meant to be isn&rsquo;t a strategy problem.<br>
+        <em>It&rsquo;s a nervous system problem.</em>
+      </p>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <p class="section-label">About Ramon</p>
+      <h2 class="section-title">The Work. <em>The Method. The Why.</em></h2>
+      <div class="about-body">
+        <p>I built a dream from the ground up &mdash; not from a place of certainty, but from learning to make my nervous system feel safe inside the expansion I was asking it to hold. Club Osa, a private tennis and pickleball venue in Tarzana, didn&rsquo;t happen because I had everything figured out. It happened because I learned to rewire the patterns telling me I didn&rsquo;t deserve it.</p>
+        <p>I&rsquo;ve sat with hundreds of high-functioning people who knew exactly what they wanted but couldn&rsquo;t get their body to cooperate. The pattern is always the same: <strong>the identity hasn&rsquo;t caught up to the vision.</strong></p>
+        <p>My work blends quantum principles, nervous system science, and deep subconscious reprogramming to help you close that gap &mdash; so your next level stops feeling like a stretch and starts feeling like home.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section class="method">
+    <div class="container-wide">
+      <div class="container" style="padding:0;">
+        <p class="section-label">The Method</p>
+        <h2 class="section-title">How the Reset <em>Actually Works</em></h2>
+      </div>
+      <div class="method-grid">
+        <div class="method-item">
+          <span class="method-num">01</span>
+          <h3>Income Identity Reset</h3>
+          <p>Your current income is a reflection of your current identity &mdash; not your capability. We rewire the subconscious story so a new level of wealth stops feeling foreign and starts feeling like yours.</p>
+        </div>
+        <div class="method-item">
+          <span class="method-num">02</span>
+          <h3>Inner Engine Reset</h3>
+          <p>Most people are running on survival energy &mdash; pushing, forcing, performing. We reset the nervous system to operate from safety and expansion instead, where real momentum lives.</p>
+        </div>
+        <div class="method-item">
+          <span class="method-num">03</span>
+          <h3>Expansion Anchor Method</h3>
+          <p>Transformation without anchoring doesn&rsquo;t stick. We install the new state so deeply that it becomes your new default &mdash; not something you have to maintain, but something you simply are.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <p class="section-label">In Their Words</p>
+      <h2 class="section-title">Real Shifts. <em>Real People.</em></h2>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <p class="testimonial-quote">I had tried everything &mdash; therapy, manifestation practices, business coaching. Nothing touched this. Ramon helped me see the exact pattern I&rsquo;d been running for thirty years. Within weeks, everything started moving.</p>
+          <div class="testimonial-attr"><strong>Dianne</strong>Former Pharma Executive &middot; Career Transition</div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-quote">I knew what I wanted to build but kept finding reasons to delay. After one session I understood why &mdash; and for the first time I didn&rsquo;t feel like I was pushing against myself. The shift was immediate.</p>
+          <div class="testimonial-attr"><strong>Beverly</strong>Entrepreneur &middot; Inner Circle Member</div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-quote">I&rsquo;d spent years trying to think my way out of patterns that were clearly deeper than thought. Ramon&rsquo;s work gave me the actual tools to go underneath the thinking &mdash; and that&rsquo;s where everything started to shift.</p>
+          <div class="testimonial-attr"><strong>Sarah</strong>Inner Circle Member</div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-quote">I&rsquo;d tried every manifestation technique out there. Nothing actually moved the needle until I understood it was a nervous system issue. After one session with Ramon&rsquo;s work, something genuinely unlocked.</p>
+          <div class="testimonial-attr"><strong>Jalene</strong>Inner Circle Member</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK WITH ME -->
+  <section class="work" id="work">
+    <div class="container-wide">
+      <div class="container" style="padding:0;">
+        <p class="section-label">Free Resources</p>
+        <h2 class="section-title">Where Would You Like <em>to Begin?</em></h2>
+      </div>
+      <div class="work-grid">
+        <div class="work-item">
+          <span class="work-tag">Free &middot; PDF Guide</span>
+          <h3>The Subconscious Reset</h3>
+          <p>Discover the limiting beliefs holding you back, clear them at the root, and install new ones that automatically attract more of what you need.</p>
+          <a href="https://reset.creatingthroughenergy.com" class="btn-small">Download Free</a>
+        </div>
+        <div class="work-item">
+          <span class="work-tag">Free &middot; Guided Meditation</span>
+          <h3>The Abundance Reset</h3>
+          <p>A guided meditation that drops you beneath the mental noise and rewires the subconscious pattern keeping wealth and expansion just out of reach.</p>
+          <a href="https://meditation.creatingthroughenergy.com" class="btn-small">Get Access</a>
+        </div>
+        <div class="work-item">
+          <span class="work-tag">Free &middot; 30-Minute Session</span>
+          <h3>Alignment Call</h3>
+          <p>A private call to identify the exact pattern creating your ceiling and map out what it takes to clear it. You&rsquo;ll leave with real clarity whether we work together or not.</p>
+          <a href="https://call.creatingthroughenergy.com" class="btn-small">Book Your Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section class="community">
+    <div class="container">
+      <p class="section-label">Stay Connected</p>
+      <p class="community-label">Join the Community</p>
+      <p class="community-sub">Daily energy practices, nervous system tools, and free content &mdash; wherever you are.</p>
+      <div class="community-inner">
+        <a href="https://chat.whatsapp.com/HlIrKNoqSZG5UWfA9WI45E?mode=gi_t" target="_blank" class="btn-whatsapp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Join WhatsApp Community
+        </a>
+        <a href="https://www.youtube.com/@CreatingThroughEnergy" target="_blank" class="btn-youtube">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          Watch on YouTube
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>
+        The version of you that has everything<br>
+        <em>is waiting on your nervous system.</em>
+      </h2>
+      <p>Let&rsquo;s find out exactly what&rsquo;s in the way &mdash; and what it takes to clear it.</p>
+      <a href="https://call.creatingthroughenergy.com" class="btn-primary">Yes &mdash; Book My Free Alignment Call</a>
+      <span class="btn-note" style="display:block;margin-top:14px;font-size:12px;color:var(--muted);">30 minutes &middot; Free &middot; No pressure &middot; Limited availability</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p style="margin-bottom:8px;font-family:'Cormorant Garamond',Georgia,serif;font-size:13px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);">Creating Through Energy</p>
+      <p style="margin-bottom:12px;">&copy; 2026 Creating Through Energy &middot; Tarzana, CA</p>
+      <p>
+        <a href="https://call.creatingthroughenergy.com">Alignment Call</a> &nbsp;&middot;&nbsp;
+        <a href="https://meditation.creatingthroughenergy.com">Abundance Reset</a> &nbsp;&middot;&nbsp;
+        <a href="https://reset.creatingthroughenergy.com">Subconscious Reset</a> &nbsp;&middot;&nbsp;
+        <a href="https://www.youtube.com/@CreatingThroughEnergy" target="_blank">YouTube</a> &nbsp;&middot;&nbsp;
+        <a href="https://chat.whatsapp.com/HlIrKNoqSZG5UWfA9WI45E?mode=gi_t" target="_blank">Community</a>
+      </p>
+    </div>
+  </footer>
+
+</div>
